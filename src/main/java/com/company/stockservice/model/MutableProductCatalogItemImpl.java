@@ -4,9 +4,9 @@ public class MutableProductCatalogItemImpl implements MutableProductCatalogItem 
 
 	private Product product;
 
-	private Integer amount;
+	private Double amount;
 
-	public MutableProductCatalogItemImpl(Product product, Integer amount) {
+	public MutableProductCatalogItemImpl(Product product, Double amount) {
 		this.product = product;
 		this.amount = amount;
 	}
@@ -17,7 +17,7 @@ public class MutableProductCatalogItemImpl implements MutableProductCatalogItem 
 	}
 
 	@Override
-	public Integer getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 
@@ -27,7 +27,7 @@ public class MutableProductCatalogItemImpl implements MutableProductCatalogItem 
 	}
 
 	@Override
-	public void setAmount(Integer amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 

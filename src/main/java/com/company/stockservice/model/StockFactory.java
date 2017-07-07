@@ -1,10 +1,14 @@
 package com.company.stockservice.model;
 
+/**
+ * Abstract Factory of different kind of object factories.
+ * 
+ * @author Malcinn
+ *
+ */
 public interface StockFactory {
 
-	public Product createProduct(String id, String name, Double price);
+	public ProductFactory getProductFactory();
 
-	public ProductCatalogItem createProductCatalogItem(Product product, Integer amount);
-
-	public ProductCatalogItem createProductCatalogItem(String id, String name, Double price, Integer amount);
+	public ProductCatalogItemFactory getProductCatalogItemFactory();
 }

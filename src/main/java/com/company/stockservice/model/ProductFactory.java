@@ -4,5 +4,5 @@ public interface ProductFactory {
 
 	public Product createProduct();
 
-	public Product createProduct(String id, String name, String price);
+	public Product createProduct(String id, String name, Double price);
 }

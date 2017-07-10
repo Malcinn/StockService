@@ -6,7 +6,7 @@ import com.company.stockservice.model.Product;
 
 public interface ProductDAO {
 
-	public int insertProduct(Product product);
+	public String insertProduct(Product product);
 
 	public boolean deleteProduct(Product product);
 

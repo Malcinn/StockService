@@ -11,9 +11,9 @@ public class StockClassProductDAO implements ProductDAO {
 
 	private static final int FAILURE_CODE = -1;
 
-	private List<Product> products = new ArrayList<Product>();
+	private static List<Product> products = new ArrayList<Product>();
 
-	private Integer nextProductIndex = 1;
+	private static Integer nextProductIndex = 1;
 
 	@Override
 	public String insertProduct(Product product) {
@@ -29,7 +29,12 @@ public class StockClassProductDAO implements ProductDAO {
 
 	@Override
 	public boolean deleteProduct(Product product) {
-		return products.remove(product);
+		int indexOfProduct = products.indexOf(product);
+		if (indexOfProduct != FAILURE_CODE) {
+			product = products.get(indexOfProduct);
+			return products.remove(product);
+		}
+		return false;
 	}
 
 	@Override

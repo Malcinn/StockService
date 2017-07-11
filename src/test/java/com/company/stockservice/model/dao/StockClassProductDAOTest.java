@@ -26,7 +26,7 @@ public class StockClassProductDAOTest {
 		productDAO.insertProduct(productFactory.createProduct());
 		productDAO.insertProduct(productFactory.createProduct());
 		String productId = productDAO.insertProduct(productFactory.createProduct());
-		Assert.assertTrue(productId.equals("3"));
+		Assert.assertTrue(productDAO.getAllProducts().size() > 2);
 
 	}
 

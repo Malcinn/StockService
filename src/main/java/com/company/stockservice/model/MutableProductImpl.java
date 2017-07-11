@@ -1,5 +1,8 @@
 package com.company.stockservice.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class MutableProductImpl implements MutableProduct {
 
 	private String id;
@@ -7,6 +10,9 @@ public class MutableProductImpl implements MutableProduct {
 	private String name;
 
 	private Double price;
+
+	public MutableProductImpl() {
+	}
 
 	public MutableProductImpl(String id, String name, Double price) {
 		super();

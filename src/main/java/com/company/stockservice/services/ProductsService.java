@@ -37,7 +37,7 @@ public class ProductsService {
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	@Path("/getAllProducts")
-	public List<MutableProductImpl> getAllMut() {
+	public List<MutableProductImpl> getAllProducts() {
 		List<MutableProductImpl> mutableProductImpls = new ArrayList<MutableProductImpl>();
 		for (Product product : productDAO.getAllProducts()) {
 			mutableProductImpls.add(new MutableProductImpl(product.getId(), product.getName(), product.getPrice()));
@@ -84,4 +84,6 @@ public class ProductsService {
 		}
 		return Response.notModified().build();
 	}
+	
+	
 }
